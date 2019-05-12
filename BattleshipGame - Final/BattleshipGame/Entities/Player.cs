@@ -67,13 +67,13 @@ namespace ConsoleApp1.Entities
             if (ProcessAttack(targetSquare))
             {
                 targetSquare.Value = Globals.GetShipTypeSymbol(Mode.Hit);
-                Console.WriteLine("\nYou hit the battleship!");             
+                Console.WriteLine("\nIt was a Hit!");             
                         
             }
             else
             {
                 targetSquare.Value = Globals.GetShipTypeSymbol(Mode.Miss);
-                Console.WriteLine("\nYou missed!");
+                Console.WriteLine("\nIt was a Miss!");
             }                   
 
         }
@@ -98,7 +98,7 @@ namespace ConsoleApp1.Entities
                         }
                         else
                         {
-                            Console.WriteLine("\nYou have already hit this position "+targetSquare.Rowheader+ targetSquare.Index+". Please choose different one.");
+                            Console.WriteLine("\nThis position was already Hit "+targetSquare.Rowheader+ targetSquare.Index+");
                             return false;
                         }
                     }
